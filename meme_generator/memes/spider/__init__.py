@@ -70,7 +70,7 @@ def spider(images: list[BuildImage], texts, args):
 
     frames: list[IMG] = []
     for i in range(52):
-        pos = (Xs[i]-1,25+random.randint(-1,1))
+        pos = (Xs[i],24+random.randint(-1,1))
         frame = BuildImage.open(img_dir / f"{i}.png")
         frame.paste(head, pos, alpha=True)
         frames.append(frame.image)
